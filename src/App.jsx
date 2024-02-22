@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import Greeter from './components/Greeter';
-export default App;
 
 function App() {
 
@@ -27,9 +26,11 @@ function App() {
         <div className="container mt-5">
             <Greeter phrase="Hello there" name="Ryan"/>
             <label for="exampleInputUsername1">Add your username:</label>
-            <input className="form-control" value={username} onChange={e => setUserName(e.target.value)}/>
+            <input id="exampleInputUsername1" className="form-control" value={username} onChange={e => setUserName(e.target.value)}/>
             <small id="emailHelp" className="form-text text-muted">You are logging in as: {username}</small>
         </div>
     );
   }
 }
+
+export default App;
